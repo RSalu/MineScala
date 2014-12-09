@@ -1,0 +1,44 @@
+// the buildscript block tells gradle where to look for the plugin 'forge'.
+buildscript {
+    repositories {
+        mavenCentral()
+        maven {
+            name = "forge"
+            url = "http://files.minecraftforge.net/maven"
+        }
+        maven {
+            name = "sonatype"
+            url = "https://oss.sonatype.org/content/repositories/snapshots/"
+        }
+    }
+    dependencies {
+        classpath 'net.minecraftforge.gradle:ForgeGradle:1.2-SNAPSHOT'
+    }
+}
+
+apply plugin: 'scala'
+apply plugin: 'forge'
+sourceCompatibility = '1.7'
+
+minecraft {
+    version = "1.7.10-10.13.2.1258"
+    runDir = "eclipse"
+}
+
+group            = ""
+archivesBaseName = "MineScala"
+version          = "SNAPSHOT"
+
+// add the -feature argument to scala compiler.
+compileScala {
+    scalaCompileOptions.additionalParameters = ["-feature"]
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+	// using the latest scala library.
+    compile 'org.scala-lang:scala-library:2.11.4'
+}
