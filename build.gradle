@@ -42,3 +42,7 @@ dependencies {
 	// using the latest scala library.
     compile 'org.scala-lang:scala-library:2.11.4'
 }
+
+task wrapper(type: Wrapper) {
+    gradleVersion = '2.2.1'
+}
