@@ -1,11 +1,11 @@
 Welcome to the accompanying source code repository to my 1.7.10 Minecraft Forge tutorial!
-=========================================================================================
+========================================================================================
 
 For Those knowing how to use git:
 Each tutorial has its own branch, just "git checkout n" where n is the tutorial number. 1 is tutorial 1 (Understanding Forge Gradle), etc.
 Sometimes, tutorial code is stepped (in tutorial 3, we continues adding functionalities to the base block), that way, I have different stages tagged.
 Use "git tag checkout nx" if you want to goto specific steps. n is the number of tutorial, x is the step in letters. For example, step 1 in tutorial 3 is 3a, step 2 is 3b, and so on.
-=========================================================================================
+========================================================================================
 
 For those who have no idea how to use git:
 1. download this repo as zip in the right hand panel of github.
