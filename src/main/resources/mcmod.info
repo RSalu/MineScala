@@ -1,0 +1,16 @@
+[
+{
+  "modid": "minescala",
+  "name": "Tutorial Scala",
+  "description": "The tutorial of mod making using scala.",
+  "version": "${version}",
+  "mcversion": "${mcversion}",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["ithilelda"],
+  "credits": "The Forge and FML guys, for making this example",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
