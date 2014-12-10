@@ -7,6 +7,7 @@ import cpw.mods.fml.common.event.FMLPreInitializationEvent
 import cpw.mods.fml.common.registry.GameRegistry
 import crn.mods.minescala.BaseBlock
 import crn.mods.minescala.traits.DiamondClicker
+import crn.mods.minescala.traits.ParticleClicker
 import net.minecraft.block.material.Material
 import org.apache.logging.log4j.LogManager
 
@@ -17,7 +18,8 @@ object ExampleMod{
   @Mod.EventHandler
   def preInit(e: FMLPreInitializationEvent) {
     GameRegistry.registerBlock(new BaseBlock("blockA", Material.rock) with DiamondClicker, "blockA")
-    GameRegistry.registerBlock(new BaseBlock("blockB", Material.rock), "blockB")
+    GameRegistry.registerBlock(new BaseBlock("blockB", Material.rock) with ParticleClicker, "blockB")
+    GameRegistry.registerBlock(new BaseBlock("blockC", Material.rock) with ParticleClicker with DiamondClicker, "blockC")
   }
 
   @Mod.EventHandler
